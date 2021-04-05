@@ -1,7 +1,6 @@
 //#region constants
 const express = require('express');
 const bodyParser = require('body-parser');
-const cookieParser = require('cookie-Parser');
 const crypto = require('crypto');
 const cors = require('cors');
 const secret = "123esfdfsdfasdasd";
@@ -64,7 +63,6 @@ app.use(session({
 }));
   
 
-app.use(cookieParser());
 //#endregion app.use
 
 //#region app.requre difined by me
