@@ -15,17 +15,13 @@ const con = mysql.createConnection({
     database: "test"
 });
 const app = express();
-const path = require('path');
-app.use(express.static('./dist/project'));
 
-app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/project/'}),
-);
+
 //#endregion constans
 
 //#region  app.use
 app.use(cors({
-    origin: 'http://localhost:4200',
+    origin: 'http://0.0.0.0:3000',
     credentials: true
 }));
 app.use(bodyParser.urlencoded())
